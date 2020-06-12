@@ -1,0 +1,1 @@
+﻿/*	Konfiguracija sistema:Pinovi 5 i 6: DC motor (06-Pwm, 05-Enc)Pin A0: izlazni pin, Analogni klizac (slider)*/int count = 0;void motor() {	count=analogRead(A0);	count=map(count, 0, 1023, 0, 255);	analogWrite(06, count);}void setup(){	}void loop(){	motor();	delay(100);}
