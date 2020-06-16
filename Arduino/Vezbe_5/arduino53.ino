@@ -1,0 +1,1 @@
+﻿/*	Konfiguracija sistema:Pin 2: ulazni pin, dugmePinovi 5 i 6, izlazni pinovi, DC motor*/int speed = 100;void prekidac() {	if (digitalRead(2)==1)		analogWrite(06, speed);	else   		analogWrite(06, 0);}void setup(){	attachInterrupt(0, prekidac, CHANGE);}void loop(){	delay(100);}
